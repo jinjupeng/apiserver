@@ -41,6 +41,7 @@ func main() {
 // pingServer pings the http server to make sure the router is working.
 func pingServer() error {
 	for i := 0; i < 2; i++ {
+		
 		// Ping the server by sending a GET request to `/health`.
 		resp, err := http.Get("http://127.0.0.1:8080" + "/sd/health")
 		if err == nil && resp.StatusCode == 200 {

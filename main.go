@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	cfg = pflag.StringP("onfig","c","","apiserver config file path.")
+	cfg = pflag.StringP("config","c","","apiserver config file path.")
 )
 func main() {
 	pflag.Parse()
@@ -27,6 +27,7 @@ func main() {
 
 	// 设置gin的运行模式(gin有3种运行模式：debug、release和test，其中debug模式会打印很多debug信息)
 	gin.SetMode(viper.GetString("runmode"))
+
 	// Create the Gin engine.
 	g := gin.New()
 
@@ -55,7 +56,7 @@ func main() {
 
 // pingServer pings the http server to make sure the router is working.
 func pingServer() error {
-	for i := 0; i < viper.GetInt("max ping count"); i++ {
+	for i := 0; i < viper.GetInt("max_ping_count"); i++ {
 		
 		// Ping the server by sending a GET request to `/health`.
 		resp, err := http.Get(viper.GetString("url") + "/sd/health")

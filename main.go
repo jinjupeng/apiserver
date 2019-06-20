@@ -6,12 +6,27 @@ import (
 	"net/http"
 	"time"
 
+	"apiserver/config"
 	"apiserver/router"
 
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
 )
 
+var (
+	cfg = pflag.StringP("onfig","c","","apiserver config file path.")
+)
 func main() {
+	pflag.Parse()
+
+	// 初始化配置
+	if err := config.Init(*cfg); err != nil {
+		panic(err)
+	}
+
+	// 设置gin的运行模式(gin有3种运行模式：debug、release和test，其中debug模式会打印很多debug信息)
+	gin.SetMode(viper.GetString("runmode"))
 	// Create the Gin engine.
 	g := gin.New()
 
@@ -34,16 +49,16 @@ func main() {
 		log.Print("The router has been deployed successfully.")
 	}()
 
-	log.Printf("Start to listening the incoming requests on http address: %s", ":8080")
-	log.Printf(http.ListenAndServe(":8080", g).Error())
+	log.Printf("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
+	log.Printf(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
 
 // pingServer pings the http server to make sure the router is working.
 func pingServer() error {
-	for i := 0; i < 2; i++ {
+	for i := 0; i < viper.GetInt("max ping count"); i++ {
 		
 		// Ping the server by sending a GET request to `/health`.
-		resp, err := http.Get("http://127.0.0.1:8080" + "/sd/health")
+		resp, err := http.Get(viper.GetString("url") + "/sd/health")
 		if err == nil && resp.StatusCode == 200 {
 			return nil
 		}

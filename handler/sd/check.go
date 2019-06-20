@@ -18,13 +18,13 @@ const (
 	GB = 1024 * MB
 )
 
-// HealthCheck shows `OK` as the ping-pong result.(检查API Server的状态：健康状况、服务器硬盘、CPU和内存使用量)
+// 检查API Server的状态：健康状况、服务器硬盘、CPU和内存使用量
 func HealthCheck(c *gin.Context) {
 	message := "OK"
 	c.String(http.StatusOK, "\n"+message)
 }
 
-// DiskCheck checks the disk usage.
+// 检查磁盘使用量
 func DiskCheck(c *gin.Context) {
 	u, _ := disk.Usage("/")
 
@@ -49,7 +49,7 @@ func DiskCheck(c *gin.Context) {
 	c.String(status, "\n"+message)
 }
 
-// CPUCheck checks the cpu usage.
+// 检查CPU使用情况
 func CPUCheck(c *gin.Context) {
 	cores, _ := cpu.Counts(false)
 
@@ -73,7 +73,7 @@ func CPUCheck(c *gin.Context) {
 	c.String(status, "\n"+message)
 }
 
-// RAMCheck checks the disk usage.
+// 检查内存使用情况
 func RAMCheck(c *gin.Context) {
 	u, _ := mem.VirtualMemory()
 

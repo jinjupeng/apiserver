@@ -26,3 +26,9 @@
 {"level":"INFO","timestamp":"2019-06-21 21:41:55.247","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
 {"level":"INFO","timestamp":"2019-06-21 21:55:12.572","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
 {"level":"INFO","timestamp":"2019-06-21 21:55:12.573","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-21 22:05:40.384","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 22:05:40.385","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2019-06-21 22:09:55.519","file":"user/create.go:26","msg":"username is: [], password is [admin]"}
+{"level":"ERROR","timestamp":"2019-06-21 22:09:55.520","file":"user/create.go:29","msg":"Get an error","data":{"error":"Err - code: 20102, message: The user was not found. This is add message., error: username can not found in db: xx.xx.xx.xx"}}
+{"level":"DEBUG","timestamp":"2019-06-21 22:09:55.520","file":"user/create.go:33","msg":"err type is ErrUserNotFound"}
+{"level":"DEBUG","timestamp":"2019-06-21 22:12:56.230","file":"user/create.go:26","msg":"username is: [admin], password is [admin]"}

@@ -1,0 +1,28 @@
+{"level":"INFO","timestamp":"2019-06-21 21:01:34.382","file":"apiserver/main.go:53","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:01:34.383","file":"apiserver/main.go:50","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-21 21:23:50.551","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"ERROR","timestamp":"2019-06-21 21:23:50.552","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"INFO","timestamp":"2019-06-21 21:23:50.552","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:23:50.553","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-21 21:29:33.408","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"ERROR","timestamp":"2019-06-21 21:29:33.409","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"INFO","timestamp":"2019-06-21 21:29:33.409","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:29:33.410","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-21 21:34:36.193","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"ERROR","timestamp":"2019-06-21 21:34:36.194","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"INFO","timestamp":"2019-06-21 21:34:36.194","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:34:36.195","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-21 21:34:43.997","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"ERROR","timestamp":"2019-06-21 21:34:43.998","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"INFO","timestamp":"2019-06-21 21:34:43.998","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:34:43.999","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-21 21:35:53.564","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"ERROR","timestamp":"2019-06-21 21:35:53.564","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1698: Access denied for user 'root'@'localhost'"}}
+{"level":"INFO","timestamp":"2019-06-21 21:35:53.565","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:35:53.567","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-21 21:41:55.246","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"}}
+{"level":"ERROR","timestamp":"2019-06-21 21:41:55.247","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"}}
+{"level":"INFO","timestamp":"2019-06-21 21:41:55.247","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:41:55.247","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-21 21:55:12.572","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-21 21:55:12.573","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}

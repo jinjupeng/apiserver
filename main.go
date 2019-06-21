@@ -1,8 +1,8 @@
 package main
 
 import (
+	"apiserver/model"
 	"errors"
-	"log"
 	"net/http"
 	"time"
 
@@ -10,9 +10,9 @@ import (
 	"apiserver/router"
 
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
-	"github.com/lexkong/log"
 )
 
 var (
@@ -25,6 +25,11 @@ func main() {
 	if err := config.Init(*cfg); err != nil {
 		panic(err)
 	}
+
+	// 初始化数据库DB
+	model.DB.Init()
+	// 关闭数据库连接
+	defer model.DB.Close()
 
 	// 设置gin的运行模式(gin有3种运行模式：debug、release和test，其中debug模式会打印很多debug信息)
 	gin.SetMode(viper.GetString("runmode"))

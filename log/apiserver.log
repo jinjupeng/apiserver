@@ -51,3 +51,9 @@
 {"level":"INFO","timestamp":"2019-06-23 08:29:52.316","file":"user/create.go:25","msg":"URL key param desc: test"}
 {"level":"INFO","timestamp":"2019-06-23 08:29:52.316","file":"user/create.go:28","msg":"Header Content-Type: application/json"}
 {"level":"DEBUG","timestamp":"2019-06-23 08:29:52.316","file":"user/create.go:30","msg":"username is: [admin], password is []"}
+{"level":"INFO","timestamp":"2019-06-23 09:54:32.358","file":"apiserver/main.go:59","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 09:54:32.359","file":"apiserver/main.go:56","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-23 09:54:58.644","file":"user/create.go:16","msg":"User Create function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2019-06-23 09:56:40.567","file":"user/update.go:18","msg":"Update function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2019-06-23 09:57:02.370","file":"user/update.go:18","msg":"Update function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2019-06-23 09:58:25.217","file":"user/update.go:18","msg":"Update function called.","data":{"X-Request-Id":""}}

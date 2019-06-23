@@ -79,3 +79,8 @@
 {"level":"INFO","timestamp":"2019-06-23 14:25:45.226","file":"apiserver/main.go:72","msg":"Start to listening the incoming requests on http address: :8080"}
 {"level":"INFO","timestamp":"2019-06-23 14:25:45.226","file":"apiserver/main.go:67","msg":"Start to listening the incoming requests on https address: :8081"}
 {"level":"INFO","timestamp":"2019-06-23 14:25:45.228","file":"apiserver/main.go:58","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-23 14:43:06.604","file":"apiserver/main.go:88","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 14:43:06.604","file":"apiserver/main.go:83","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-23 14:43:06.606","file":"apiserver/main.go:74","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-23 14:43:47.303","file":"apiserver/main.go:72","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 14:43:47.304","file":"apiserver/main.go:73","msg":"listen tcp :8080: bind: address already in use"}

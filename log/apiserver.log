@@ -57,3 +57,6 @@
 {"level":"INFO","timestamp":"2019-06-23 09:56:40.567","file":"user/update.go:18","msg":"Update function called.","data":{"X-Request-Id":""}}
 {"level":"INFO","timestamp":"2019-06-23 09:57:02.370","file":"user/update.go:18","msg":"Update function called.","data":{"X-Request-Id":""}}
 {"level":"INFO","timestamp":"2019-06-23 09:58:25.217","file":"user/update.go:18","msg":"Update function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2019-06-23 10:17:14.430","file":"apiserver/main.go:62","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 10:17:14.430","file":"apiserver/main.go:59","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-23 10:18:55.574","file":"middleware/logging.go:85","msg":"1.823969ms    | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}

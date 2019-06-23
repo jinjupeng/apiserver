@@ -1,13 +1,14 @@
 package main
 
 import (
-	"apiserver/model"
 	"errors"
 	"net/http"
 	"time"
 
 	"apiserver/config"
+	"apiserver/model"
 	"apiserver/router"
+	"apiserver/router/middleware"
 
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
@@ -37,15 +38,17 @@ func main() {
 	// Create the Gin engine.
 	g := gin.New()
 
-	middlewares := []gin.HandlerFunc{}
 
+
+	// main函数调用route.Load(),函数route.Load()最终调用g.use()加载该中间件
 	// Routes.
 	router.Load(
 		// Cores.
 		g,
 
 		// Middlwares.
-		middlewares...,
+		middleware.Logging(),
+		middleware.RequestId(),
 	)
 
 	// Ping the server to make sure the router is working.

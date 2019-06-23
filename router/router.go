@@ -26,7 +26,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// 创建用户API
 	u := g.Group("v1/user")
 	{
-		u.POST("",user.Create)
+		u.POST("/:username",user.Create)
 	}
 	// The health check handlers
 	svcd := g.Group("/sd")

@@ -68,3 +68,14 @@
 {"level":"INFO","timestamp":"2019-06-23 11:01:56.306","file":"middleware/logging.go:88","msg":"138.349µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
 {"level":"INFO","timestamp":"2019-06-23 11:02:12.967","file":"user/create.go:16","msg":"User Create function called.","data":{"X-Request-Id":"eb9bfe5f-1418-4c8c-9830-8ec764febed4"}}
 {"level":"INFO","timestamp":"2019-06-23 11:02:13.046","file":"middleware/logging.go:88","msg":"78.917271ms   | 127.0.0.1    | POST /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2019-06-23 14:11:36.600","file":"config/config.go:77","msg":"Config file changed: /home/jjp/go/src/apiserver/conf/config.yaml"}
+{"level":"INFO","timestamp":"2019-06-23 14:13:58.388","file":"apiserver/main.go:72","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 14:13:58.389","file":"apiserver/main.go:67","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-23 14:13:58.390","file":"apiserver/main.go:58","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-23 14:22:00.235","file":"apiserver/main.go:72","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 14:22:00.235","file":"apiserver/main.go:67","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-23 14:22:00.235","file":"apiserver/main.go:87","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-06-23 14:22:01.237","file":"apiserver/main.go:58","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-23 14:25:45.226","file":"apiserver/main.go:72","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-23 14:25:45.226","file":"apiserver/main.go:67","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-23 14:25:45.228","file":"apiserver/main.go:58","msg":"The router has been deployed successfully."}

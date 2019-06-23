@@ -7,6 +7,7 @@ import (
 	"apiserver/model"
 	"apiserver/util"
 )
+
 // List list the users in the database
 func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, error) {
 	infos := make([]*model.UserInfo, 0)

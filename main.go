@@ -17,8 +17,9 @@ import (
 )
 
 var (
-	cfg = pflag.StringP("config","c","","apiserver config file path.")
+	cfg = pflag.StringP("config", "c", "", "apiserver config file path.")
 )
+
 func main() {
 	pflag.Parse()
 
@@ -37,8 +38,6 @@ func main() {
 
 	// Create the Gin engine.
 	g := gin.New()
-
-
 
 	// main函数调用route.Load(),函数route.Load()最终调用g.use()加载该中间件
 	// Routes.
@@ -59,6 +58,17 @@ func main() {
 		log.Info("The router has been deployed successfully.")
 	}()
 
+	// Start to listening the incoming requests.
+	cert := viper.GetString("tls.cert")
+	key := viper.GetString("tls.key")
+	// 如果提供了TLS证书和私钥则启动HTTPS端口
+	if cert != "" && key != "" {
+		go func() {
+			log.Infof("Start to listening the incoming requests on https address: %s", viper.GetString("tls.addr"))
+			log.Info(http.ListenAndServeTLS(viper.GetString("tls.addr"), cert, key, g).Error())
+		}()
+	}
+
 	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 }
@@ -66,7 +76,7 @@ func main() {
 // pingServer pings the http server to make sure the router is working.
 func pingServer() error {
 	for i := 0; i < viper.GetInt("max_ping_count"); i++ {
-		
+
 		// Ping the server by sending a GET request to `/health`.
 		resp, err := http.Get(viper.GetString("url") + "/sd/health")
 		if err == nil && resp.StatusCode == 200 {

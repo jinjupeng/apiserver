@@ -13,7 +13,7 @@ import (
 
 // Create creates a new user account.
 func Create(c *gin.Context) {
-	log.Info("User Create function called.",lager.Data{"X-Request-Id": util.GetReqID(c)})
+	log.Info("User Create function called.", lager.Data{"X-Request-Id": util.GetReqID(c)})
 	// 从HTTP消息体获取参数（用户名和密码）
 	var r CreateRequest
 	if err := c.Bind(&r); err != nil {
@@ -27,20 +27,20 @@ func Create(c *gin.Context) {
 	}
 
 	// Validate the data.参数校验
-	if err := u.Validate(); err != nil{
-		SendResponse(c,errno.ErrValidation,nil)
+	if err := u.Validate(); err != nil {
+		SendResponse(c, errno.ErrValidation, nil)
 		return
 	}
 
 	// Encrypt the user password.加密密码
-	if err := u.Encrypt(); err != nil{
-		SendResponse(c,errno.ErrEncrypt,nil)
+	if err := u.Encrypt(); err != nil {
+		SendResponse(c, errno.ErrEncrypt, nil)
 		return
 	}
 
 	// Insert the user to the database.在数据库总添加数据记录
-	if err := u.Create(); err != nil{
-		SendResponse(c,errno.ErrDatabase,nil)
+	if err := u.Create(); err != nil {
+		SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}
 	// 返回结果（这里是用户名）
@@ -49,18 +49,18 @@ func Create(c *gin.Context) {
 	}
 
 	// Show the user information
-	SendResponse(c,nil,rsp)
+	SendResponse(c, nil, rsp)
 
 }
 
 // 参数校验
-func (r *CreateRequest) checkParam() error{
-	if r.Username == ""{
-		return errno.New(errno.ErrValidation,nil).Add("username is empty.")
+func (r *CreateRequest) checkParam() error {
+	if r.Username == "" {
+		return errno.New(errno.ErrValidation, nil).Add("username is empty.")
 	}
 
-	if r.Password == ""{
-		return errno.New(errno.ErrValidation,nil).Add("password is empty")
+	if r.Password == "" {
+		return errno.New(errno.ErrValidation, nil).Add("password is empty")
 	}
 
 	return nil

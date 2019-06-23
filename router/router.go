@@ -7,6 +7,7 @@ import (
 	"apiserver/handler/user"
 	"apiserver/router/middleware"
 
+	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
 )
 
@@ -18,13 +19,17 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.Use(middleware.Options) // 浏览器跨域OPTIONS请求设置
 	g.Use(middleware.Secure)  // 一些安全设置
 	g.Use(mw...)
-	// api for authentication functionalities
-	g.POST("/login", user.Login)
 
 	// 404 Handler.
 	g.NoRoute(func(c *gin.Context) {
 		c.String(http.StatusNotFound, "The incorrect API route.")
 	})
+
+	// pprof router
+	pprof.Register(g)
+
+	// api for authentication functionalities
+	g.POST("/login", user.Login)
 
 	// 用户路由设置
 	u := g.Group("v1/user")

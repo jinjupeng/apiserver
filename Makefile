@@ -21,7 +21,7 @@ clean:
 	find . -name "[._]*.s[a-w][a-z]" | xargs -i rm -f {}
 gotool:
 	# 格式化代码
-	gofmt -w .
+	gofmt -w . | grep -v vendor;true
 	# 源代码静态检查
 	go tool vet . | grep -v vendor;true
 ca:

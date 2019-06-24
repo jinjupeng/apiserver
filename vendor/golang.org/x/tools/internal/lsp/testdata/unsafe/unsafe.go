@@ -11,4 +11,3 @@ func _() {
 	x := struct{}{}
 	_ = unsafe.Sizeof(x) //@complete("i", Sizeof)
 }
-

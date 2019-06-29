@@ -71,3 +71,12 @@
 在Go API项目中，一般都会包括这些功能项：Makefile文件、配置文件目录、RESTful API服务器的handler目录、model目录、工具类目录、vendor目录，以及实际处理业务逻辑函数所存放的service目录。
 
 这些都在上面的代码结构中列出，新加功能时将代码放入对应功能的目录/文件中以使整个项目代码结构更加清晰，非常有利于后期的查找和维护。
+
+## 注意
+
+1. 在golang1.12中，go tool vet已经转为go vet
+
+```bash
+go tool vet main.go
+# 错误：vet: invoking "go tool vet" directly is unsupported; use "go vet"
+```

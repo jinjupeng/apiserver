@@ -27,3 +27,8 @@ docker_db:
   addr: 127.0.0.1:3306
   username: root
   password: 123456
+image:
+  ImagePrefixUrl: http://127.0.0.1:8000
+  ImageSavePath: upload/images/
+  ImageMaxSize: 5 # MB
+  ImageAllowExts: [".jpg",".jpeg",".png"]

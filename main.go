@@ -61,9 +61,12 @@ func main() {
 		// Cores.
 		g,
 
-		// Middlwares.
+		// 日志中间件
 		middleware.Logging(),
+		// 标识HTT请求中间件
 		middleware.RequestId(),
+		// 跨域中间件
+		middleware.CORSMiddleware(),
 	)
 
 	// Ping the server to make sure the router is working.

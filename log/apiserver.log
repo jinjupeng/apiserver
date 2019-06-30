@@ -147,3 +147,44 @@
 {"level":"INFO","timestamp":"2019-06-24 21:55:51.656","file":"apiserver/main.go:88","msg":"Start to listening the incoming requests on http address: :8080"}
 {"level":"INFO","timestamp":"2019-06-24 21:55:51.656","file":"apiserver/main.go:83","msg":"Start to listening the incoming requests on https address: :8081"}
 {"level":"INFO","timestamp":"2019-06-24 21:55:51.660","file":"apiserver/main.go:74","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-26 06:55:55.873","file":"apiserver/main.go:88","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-26 06:55:55.874","file":"apiserver/main.go:83","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-26 06:55:55.874","file":"apiserver/main.go:74","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-06-26 06:56:09.330","file":"middleware/logging.go:88","msg":"199.287µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-26 06:56:17.923","file":"middleware/logging.go:88","msg":"138.287µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-26 06:56:31.441","file":"middleware/logging.go:88","msg":"135.112µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-26 06:57:08.942","file":"middleware/logging.go:88","msg":"150.408µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-26 06:58:46.902","file":"middleware/logging.go:88","msg":"137.855µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-26 06:59:04.276","file":"middleware/logging.go:88","msg":"102.092401ms  | 127.0.0.1    | POST /login | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2019-06-26 07:00:51.723","file":"middleware/logging.go:88","msg":"128.966µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-26 07:00:59.169","file":"middleware/logging.go:88","msg":"133.631µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-26 07:01:28.971","file":"middleware/logging.go:88","msg":"174.009µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-28 20:58:16.997","file":"apiserver/main.go:88","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-28 20:58:16.998","file":"apiserver/main.go:83","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-28 20:58:16.998","file":"apiserver/main.go:74","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2019-06-28 20:58:40.432","file":"middleware/logging.go:80","msg":"response body can not unmarshal to model.Response struct, body: ``","data":{"error":"unexpected end of JSON input"}}
+{"level":"INFO","timestamp":"2019-06-28 20:58:40.432","file":"middleware/logging.go:88","msg":"131.019µs     | 127.0.0.1    | GET /login | {code: 10001, message: unexpected end of JSON input}"}
+{"level":"ERROR","timestamp":"2019-06-28 20:58:52.049","file":"middleware/logging.go:80","msg":"response body can not unmarshal to model.Response struct, body: ``","data":{"error":"unexpected end of JSON input"}}
+{"level":"INFO","timestamp":"2019-06-28 20:58:52.049","file":"middleware/logging.go:88","msg":"97.441µs      | 127.0.0.1    | GET /login | {code: 10001, message: unexpected end of JSON input}"}
+{"level":"INFO","timestamp":"2019-06-28 21:04:17.681","file":"middleware/logging.go:88","msg":"225.485µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:05:09.000","file":"middleware/logging.go:88","msg":"169.261µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:05:22.237","file":"middleware/logging.go:88","msg":"161.474µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:06:49.958","file":"middleware/logging.go:88","msg":"171.353µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:08:11.923","file":"middleware/logging.go:88","msg":"145.951µs     | 127.0.0.1    | POST /login | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:09:06.465","file":"middleware/logging.go:88","msg":"94.826638ms   | 127.0.0.1    | POST /login | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2019-06-28 21:10:19.468","file":"middleware/logging.go:88","msg":"126.166µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:10:41.661","file":"middleware/logging.go:88","msg":"197.393µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:11:22.036","file":"middleware/logging.go:88","msg":"175.204µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:12:07.608","file":"middleware/logging.go:88","msg":"99.952µs      | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:12:31.569","file":"middleware/logging.go:88","msg":"82.586101ms   | 127.0.0.1    | POST /login | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2019-06-28 21:14:03.331","file":"middleware/logging.go:88","msg":"157.031µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:14:25.574","file":"middleware/logging.go:88","msg":"201.264µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:15:22.010","file":"middleware/logging.go:88","msg":"236.362µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:17:08.698","file":"middleware/logging.go:88","msg":"213.84µs      | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:17:27.581","file":"middleware/logging.go:88","msg":"189.683µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"INFO","timestamp":"2019-06-28 21:18:09.592","file":"middleware/logging.go:88","msg":"209.792µs     | 127.0.0.1    | POST /v1/user | {code: 20103, message: The token was invalid.}"}
+{"level":"ERROR","timestamp":"2019-06-28 21:57:52.409","file":"middleware/logging.go:80","msg":"response body can not unmarshal to model.Response struct, body: ``","data":{"error":"unexpected end of JSON input"}}
+{"level":"INFO","timestamp":"2019-06-28 21:57:52.409","file":"middleware/logging.go:88","msg":"79.121µs      | 127.0.0.1    | GET /login | {code: 10001, message: unexpected end of JSON input}"}
+{"level":"INFO","timestamp":"2019-06-30 09:47:07.334","file":"apiserver/main.go:88","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-06-30 09:47:07.334","file":"apiserver/main.go:83","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-06-30 09:47:07.336","file":"apiserver/main.go:74","msg":"The router has been deployed successfully."}

@@ -10,8 +10,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Login generates the authentication token
-// if the password was matched with the specified account.
+// @Summary Login generates the authentication token
+// @Description 登录成功返回token
+// @Tags user
+// @Accept  json
+// @Produce  json
+// @Param user body user.LoginRequest true "Login"
+// @Success 200 {object} user.CreateResponse "{"code":0,"message":"OK","data":{"username":"kong"}}"
+// @Router /user [post]
 func Login(c *gin.Context) {
 	// Binding the data with the user struct.
 	var u model.UserModel

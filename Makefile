@@ -21,9 +21,9 @@ clean:
 	find . -name "[._]*.s[a-w][a-z]" | xargs -i rm -f {}
 gotool:
 	# 格式化代码
-	gofmt -w . | grep -v vendor;true
+	gofmt -w . |& grep -v vendor;true
 	# 源代码静态检查
-	go tool vet . | grep -v vendor;true
+	go vet . |& grep -v vendor;true
 ca:
 	# 生成证书
 	openssl req -new -nodes -x509 -out conf/server.crt -keyout conf/server.key -days 3650 -subj "/C=DE/ST=NRW/L=Earth/O=Random Company/OU=IT/CN=127.0.0.1/emailAddress=xxxxx@qq.com"

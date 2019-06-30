@@ -1886,7 +1886,7 @@ const _ = pkg.X
 			Files: fm{
 				"example/node_modules/pkg/a.go":         "package pkg\nconst X = 1",
 				"otherwise-longer/not_modules/pkg/a.go": "package pkg\nconst X = 1",
-				"x/x.go": input,
+				"x/x.go":                                input,
 			},
 		},
 	}.processTest(t, "foo.com", "x/x.go", nil, nil, want)

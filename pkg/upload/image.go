@@ -31,6 +31,10 @@ func GetImagePath() string {
 	return viper.GetString("ImageSavePath")
 }
 
+// 获取图片完整路径
+func GetImageFullPath() string {
+	return viper.GetString("RuntimeRootPath") + GetImagePath()
+}
 
 // 检查图片后缀
 func CheckImageExt(fileName string) bool {

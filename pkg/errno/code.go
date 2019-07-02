@@ -16,7 +16,7 @@ var (
 	ErrPasswordIncorrect = &Errno{Code: 20104, Message: "The password was incorrect."}
 
 	// Image upload errors
-	ErrUploadSaveImageFail  = &Errno{Code: 30001, Message: "保存图片失败"}
-	ErrUploadCheckImageFail = &Errno{Code: 30002, Message: "检查图片失败"}
+	ErrUploadSaveImageFail    = &Errno{Code: 30001, Message: "保存图片失败"}
+	ErrUploadCheckImageFail   = &Errno{Code: 30002, Message: "检查图片失败"}
 	ErrUploadCheckImageFormat = &Errno{Code: 30003, Message: "检查图片错误，图片格式或大小有问题"}
 )

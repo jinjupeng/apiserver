@@ -8,7 +8,7 @@ import (
 )
 
 // 上传图片
-func UplaodImage(c *gin.Context){
+func UplaodImage(c *gin.Context) {
 	data := make(map[string]string)
 	file, image, err := c.Request.FormFile("image")
 	if err != nil {
@@ -19,7 +19,7 @@ func UplaodImage(c *gin.Context){
 	if image == nil {
 		SendResponse(c, errno.InternalServerError, nil)
 		return
-	}else {
+	} else {
 		imageName := upload.GetImageName(image.Filename)
 		fullPath := upload.GetImageFullPath()
 		savePath := upload.GetImagePath()
@@ -27,7 +27,7 @@ func UplaodImage(c *gin.Context){
 		src := fullPath + imageName
 		if !upload.CheckImageExt(imageName) || !upload.CheckImageSize(file) {
 			SendResponse(c, errno.ErrUploadCheckImageFormat, nil)
-		}else {
+		} else {
 			err := upload.CheckImage(fullPath)
 			if err != nil {
 				SendResponse(c, errno.ErrUploadCheckImageFail, nil)

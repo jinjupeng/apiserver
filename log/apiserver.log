@@ -193,6 +193,7 @@
 {"level":"INFO","timestamp":"2019-06-30 11:34:01.536","file":"apiserver/main.go:91","msg":"Start to listening the incoming requests on http address: :8080"}
 {"level":"INFO","timestamp":"2019-06-30 11:34:01.536","file":"apiserver/main.go:92","msg":"listen tcp :8080: bind: address already in use"}
 {"level":"INFO","timestamp":"2019-06-30 11:34:01.536","file":"apiserver/main.go:86","msg":"Start to listening the incoming requests on https address: :8081"}
+<<<<<<< HEAD
 {"level":"ERROR","timestamp":"2019-06-30 22:01:44.732","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"dial tcp 127.0.0.1:3306: connect: connection refused"}}
 {"level":"ERROR","timestamp":"2019-06-30 22:01:44.733","file":"model/init.go:33","msg":"Database connection failed. Database name: db_apiserver","data":{"error":"dial tcp 127.0.0.1:3306: connect: connection refused"}}
 {"level":"INFO","timestamp":"2019-06-30 22:01:44.733","file":"apiserver/main.go:88","msg":"Start to listening the incoming requests on http address: :8080"}
@@ -208,3 +209,27 @@
 {"level":"INFO","timestamp":"2019-06-30 23:40:40.826","file":"apiserver/main.go:83","msg":"Start to listening the incoming requests on https address: :8081"}
 {"level":"INFO","timestamp":"2019-06-30 23:40:40.829","file":"apiserver/main.go:74","msg":"The router has been deployed successfully."}
 {"level":"INFO","timestamp":"2019-06-30 23:41:26.578","file":"middleware/logging.go:88","msg":"12.260014ms   | 127.0.0.1    | POST /login | {code: 20102, message: The user was not found.}"}
+{"level":"INFO","timestamp":"2019-07-01 20:30:17.259","file":"apiserver/main.go:91","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-07-01 20:30:17.260","file":"apiserver/main.go:86","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-07-01 20:30:17.260","file":"apiserver/main.go:106","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-07-01 20:30:18.261","file":"apiserver/main.go:77","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-07-01 20:30:26.455","file":"middleware/logging.go:88","msg":"111.602929ms  | 127.0.0.1    | POST /login | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 20:34:14.270","file":"apiserver/main.go:91","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-07-01 20:34:14.270","file":"apiserver/main.go:86","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-07-01 20:34:14.271","file":"apiserver/main.go:77","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-07-01 20:34:19.808","file":"middleware/logging.go:88","msg":"83.718205ms   | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 20:34:33.992","file":"middleware/logging.go:88","msg":"93.246189ms   | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 21:49:19.640","file":"middleware/logging.go:88","msg":"268.058483ms  | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 21:50:30.783","file":"middleware/logging.go:88","msg":"100.208563ms  | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 21:50:32.069","file":"middleware/logging.go:88","msg":"88.818557ms   | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 21:52:01.372","file":"middleware/logging.go:88","msg":"100.610038ms  | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 21:55:01.799","file":"middleware/logging.go:88","msg":"90.881862ms   | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 21:57:59.258","file":"middleware/logging.go:88","msg":"120.036019ms  | 127.0.0.1    | POST /login | {code: 20000, message: OK}"}
+{"level":"INFO","timestamp":"2019-07-01 22:31:22.842","file":"apiserver/main.go:91","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-07-01 22:31:22.842","file":"apiserver/main.go:86","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-07-01 22:31:22.843","file":"apiserver/main.go:106","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-07-01 22:31:23.845","file":"apiserver/main.go:77","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2019-07-01 22:35:11.879","file":"apiserver/main.go:91","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2019-07-01 22:35:11.879","file":"apiserver/main.go:106","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2019-07-01 22:35:11.879","file":"apiserver/main.go:86","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2019-07-01 22:35:12.881","file":"apiserver/main.go:77","msg":"The router has been deployed successfully."}

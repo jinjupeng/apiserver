@@ -31,7 +31,6 @@ func GetImagePath() string {
 	return viper.GetString("ImageSavePath")
 }
 
-
 // 检查图片后缀
 func CheckImageExt(fileName string) bool {
 	ext := file.GetExt(fileName)
@@ -48,7 +47,7 @@ func CheckImageExt(fileName string) bool {
 func CheckImageSize(f multipart.File) bool {
 	size, err := file.GetSize(f)
 	if err != nil {
-		log.Fatal("图片检查异常",err)
+		log.Fatal("图片检查异常", err)
 		return false
 	}
 

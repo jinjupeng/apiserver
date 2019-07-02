@@ -25,7 +25,7 @@ func UplaodImage(c *gin.Context) {
 		savePath := upload.GetImagePath()
 
 		src := fullPath + imageName
-		if !upload.CheckImageExt(imageName) || !upload.CheckImageSize(file) {
+		if ! (upload.CheckImageExt(imageName) && upload.CheckImageSize(file)) {
 			SendResponse(c, errno.ErrUploadCheckImageFormat, nil)
 		} else {
 			err := upload.CheckImage(fullPath)

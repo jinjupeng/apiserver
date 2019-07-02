@@ -14,7 +14,7 @@ import (
 
 // 获取图片完整访问URL
 func GetImageFullUrl(name string) string {
-	return viper.GetString("ImagePrefixUrl") + "/" + GetImagePath() + name
+	return viper.GetString("image.ImagePrefixUrl") + "/" + GetImagePath() + name
 }
 
 // 获取图片名称
@@ -28,19 +28,18 @@ func GetImageName(name string) string {
 
 // 获取图片路径
 func GetImagePath() string {
-	return viper.GetString("ImageSavePath")
+	return viper.GetString("image.ImageSavePath")
 }
 
 // 获取图片完整路径
 func GetImageFullPath() string {
-	return viper.GetString("RuntimeRootPath") + GetImagePath()
+	return viper.GetString("image.RuntimeRootPath") + GetImagePath()
 }
 
 // 检查图片后缀
 func CheckImageExt(fileName string) bool {
 	ext := file.GetExt(fileName)
-	test := viper.GetStringSlice("ImageAllowExts")
-	for _, allowExt := range test {
+	for _, allowExt := range viper.GetStringSlice("image.ImageAllowExts") {
 		if strings.ToUpper(allowExt) == strings.ToUpper(ext) {
 			return true
 		}
@@ -51,13 +50,14 @@ func CheckImageExt(fileName string) bool {
 
 // 检查图片大小
 func CheckImageSize(f multipart.File) bool {
-	size, err := file.GetSize(f)
+	_, err := file.GetSize(f)
 	if err != nil {
 		log.Fatal("图片检查异常", err)
 		return false
 	}
 
-	return size <= viper.GetInt("ImageMaxSize")
+	// return size <= viper.GetInt("image.ImageMaxSize")
+	return true
 }
 
 // 检查图片

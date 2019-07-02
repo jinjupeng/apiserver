@@ -29,7 +29,10 @@ docker_db:
   password: 123456
 image:
   RuntimeRootPath: runtime/  # 文件上传根路径
-  ImagePrefixUrl: http://127.0.0.1:8000
+  ImagePrefixUrl: http://127.0.0.1:8080
   ImageSavePath: upload/images/
   ImageMaxSize: 5 # MB
-  ImageAllowExts: [".jpg",".jpeg",".png"]
+  ImageAllowExts:
+    - .jpg
+    - .jpeg
+    - .png

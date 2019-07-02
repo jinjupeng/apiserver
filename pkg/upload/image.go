@@ -39,7 +39,8 @@ func GetImageFullPath() string {
 // 检查图片后缀
 func CheckImageExt(fileName string) bool {
 	ext := file.GetExt(fileName)
-	for _, allowExt := range viper.GetStringSlice("ImageAllowExts") {
+	test := viper.GetStringSlice("ImageAllowExts")
+	for _, allowExt := range test {
 		if strings.ToUpper(allowExt) == strings.ToUpper(ext) {
 			return true
 		}

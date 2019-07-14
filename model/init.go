@@ -36,13 +36,22 @@ func openDB(username, password, addr, name string) *gorm.DB {
 	// set for db connection
 	setupDB(db)
 
-	// 创建表
+	// 创建用户信息表
+	if !db.HasTable(&UserModel{}) {
+		// db.Set用来设置一些额外的属性
+		if err := db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8").CreateTable(&UserModel{}).Error; err != nil {
+			panic(err)
+		}
+	}
+
+	// 创建视频信息表
 	if !db.HasTable(&VideoModel{}) {
 		// db.Set用来设置一些额外的属性
 		if err := db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8").CreateTable(&VideoModel{}).Error; err != nil {
 			panic(err)
 		}
 	}
+
 
 	return db
 }

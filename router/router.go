@@ -40,16 +40,16 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.POST("/login", user.Login)
 
 	// 图片上传
-	g.POST("/upload", api.UplaodImage)
+	g.POST("/upload/image", api.UplaodImage)
 
 	// 前端预览
-	g.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
+	g.StaticFS("/upload/preview_images", http.Dir(upload.GetImageFullPath()))
 
 	// 视频上传
 	g.POST("/upload/video", api.UploadVideo)
 
 	// 前端预览
-	g.StaticFS("/upload/videos", http.Dir(upload.GetVideoFullPath()))
+	g.StaticFS("/upload/preview_videos", http.Dir(upload.GetVideoFullPath()))
 
 	// 用户路由设置
 	u := g.Group("v1/user")

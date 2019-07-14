@@ -67,6 +67,7 @@ func UploadVideo(c *gin.Context) {
 			err := upload.CheckVideo(fullPath)
 			if err != nil {
 				SendResponse(c, errno.ErrUploadCheckVideoFail, nil)
+				// 上传文件到指定路径
 			} else if err := c.SaveUploadedFile(video, src); err != nil {
 				SendResponse(c, errno.ErrUploadSaveVideoFail, nil)
 			} else {

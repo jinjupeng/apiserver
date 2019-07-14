@@ -19,4 +19,9 @@ var (
 	ErrUploadSaveImageFail    = &Errno{Code: 30001, Message: "保存图片失败"}
 	ErrUploadCheckImageFail   = &Errno{Code: 30002, Message: "检查图片失败"}
 	ErrUploadCheckImageFormat = &Errno{Code: 30003, Message: "检查图片错误，图片格式或大小有问题"}
+
+	// Video upload errors
+	ErrUploadSaveVideoFail    = &Errno{Code: 40001, Message: "保存视频失败"}
+	ErrUploadCheckVideoFail   = &Errno{Code: 40002, Message: "检查视频失败"}
+	ErrUploadCheckVideoFormat = &Errno{Code: 40003, Message: "检查视频错误，视频格式或大小有问题"}
 )

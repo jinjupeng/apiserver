@@ -42,3 +42,38 @@ func UplaodImage(c *gin.Context) {
 	}
 
 }
+
+// 上传视频
+func UploadVideo(c *gin.Context) {
+	data := make(map[string]string)
+	file, video, err := c.Request.FormFile("video")
+	if err != nil {
+		SendResponse(c, errno.InternalServerError, nil)
+		return
+	}
+
+	if video == nil {
+		SendResponse(c, errno.InternalServerError, nil)
+		return
+	} else {
+		videoName := upload.GetVideoName(video.Filename)
+		fullPath := upload.GetVideoFullPath()
+		savePath := upload.GetVideoPath()
+
+		src := fullPath + videoName
+		if !(upload.CheckVideoExt(videoName) && upload.CheckVideoSize(file)) {
+			SendResponse(c, errno.ErrUploadCheckVideoFormat, nil)
+		} else {
+			err := upload.CheckVideo(fullPath)
+			if err != nil {
+				SendResponse(c, errno.ErrUploadCheckVideoFail, nil)
+			} else if err := c.SaveUploadedFile(video, src); err != nil {
+				SendResponse(c, errno.ErrUploadSaveVideoFail, nil)
+			} else {
+				data["video_url"] = upload.GetImageFullUrl(videoName)
+				data["video_save_url"] = savePath + videoName
+				SendResponse(c, errno.OK, data)
+			}
+		}
+	}
+}

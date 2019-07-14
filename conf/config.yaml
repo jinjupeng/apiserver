@@ -36,3 +36,12 @@ image:
     - .jpg
     - .jpeg
     - .png
+video:
+  RuntimeRootPath: runtime/  # 文件上传根路径
+  VideoPrefixUrl: http://127.0.0.1:8080
+  VideoSavePath: upload/videos/
+  VideoMaxSize: 50 # MB
+  VideoAllowExts:
+    - .mp4
+    - .avi
+    - .flv

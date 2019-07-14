@@ -35,7 +35,8 @@ func openDB(username, password, addr, name string) *gorm.DB {
 
 	// set for db connection
 	setupDB(db)
-
+	// 自动迁移
+	migration()
 	return db
 }
 

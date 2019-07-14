@@ -46,7 +46,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
 
 	// 视频上传
-	g.POST("/upload", api.UploadVideo)
+	g.POST("/upload/video", api.UploadVideo)
 
 	// 前端预览
 	g.StaticFS("/upload/videos", http.Dir(upload.GetVideoFullPath()))

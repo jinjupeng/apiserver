@@ -28,8 +28,8 @@ docker_db:
   username: root
   password: 123456
 image:
-  RuntimeRootPath: runtime/  # 文件上传根路径
-  ImagePrefixUrl: http://127.0.0.1:8080
+  RuntimeRootPath: runtime/  # 图片上传根路径
+  ImagePrefixUrl: http://127.0.0.1:8085
   ImageSavePath: upload/images/
   ImageMaxSize: 5 # MB
   ImageAllowExts:
@@ -37,8 +37,8 @@ image:
     - .jpeg
     - .png
 video:
-  RuntimeRootPath: runtime/  # 文件上传根路径
-  VideoPrefixUrl: http://127.0.0.1:8080
+  RuntimeRootPath: runtime/  # 视频上传根路径
+  VideoPrefixUrl: http://127.0.0.1:8086
   VideoSavePath: upload/videos/
   VideoMaxSize: 50 # MB
   VideoAllowExts:

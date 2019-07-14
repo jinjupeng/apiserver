@@ -70,7 +70,7 @@ func UploadVideo(c *gin.Context) {
 			} else if err := c.SaveUploadedFile(video, src); err != nil {
 				SendResponse(c, errno.ErrUploadSaveVideoFail, nil)
 			} else {
-				data["video_url"] = upload.GetImageFullUrl(videoName)
+				data["video_url"] = upload.GetVideoFullUrl(videoName)
 				data["video_save_url"] = savePath + videoName
 				SendResponse(c, errno.OK, data)
 			}

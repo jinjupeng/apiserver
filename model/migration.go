@@ -5,5 +5,5 @@ package model
 func migration() {
 	// 自动迁移模式
 	// GetSelfDB().AutoMigrate(&UserModel{})
-	GetSelfDB().AutoMigrate(&VideoModel{})
+	// GetSelfDB().AutoMigrate(&VideoModel{})
 }

@@ -28,7 +28,7 @@ func GetVideoName(name string) string {
 
 // 获取视频路径
 func GetVideoPath() string {
-	return viper.GetString("video.RuntimeRootPath")
+	return viper.GetString("video.VideoSavePath")
 }
 
 // 获取视频完整路径

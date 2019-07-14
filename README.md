@@ -20,14 +20,15 @@
 │   ├── handler.go
 │   ├── sd                       # 健康检查handler
 │   │   └── check.go 
-│   └── user                     # 核心：用户业务逻辑handler
-│       ├── create.go            # 新增用户
-│       ├── delete.go            # 删除用户
-│       ├── get.go               # 获取指定的用户信息
-│       ├── list.go              # 查询用户列表
-│       ├── login.go             # 用户登录
-│       ├── update.go            # 更新用户
-│       └── user.go              # 存放用户handler公用的函数、结构体等
+│   └── v1                       # API接口版本
+|       └── user                 # 核心：用户业务逻辑handler
+│           ├── create.go        # 新增用户
+│           ├── delete.go        # 删除用户
+│           ├── get.go           # 获取指定的用户信息
+│           ├── list.go          # 查询用户列表
+│           ├── login.go         # 用户登录
+│           ├── update.go        # 更新用户
+│           └── user.go          # 存放用户handler公用的函数、结构体等
 ├── main.go                      # Go程序唯一入口
 ├── Makefile                     # Makefile文件，一般大型软件系统都是采用make来作为编译工具
 ├── model                        # 数据库相关的操作统一放在这里，包括数据库初始化和对表的增删改查

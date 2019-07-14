@@ -6,7 +6,7 @@ import (
 	"apiserver/pkg/auth"
 	"apiserver/pkg/constvar"
 
-	validator "gopkg.in/go-playground/validator.v9"
+	"gopkg.in/go-playground/validator.v9"
 )
 
 // User represents a registered user.
@@ -16,6 +16,7 @@ type UserModel struct {
 	Password string `json:"password" gorm:"column:password;not null" binding:"required" validate:"min=5,max=128"`
 }
 
+// 自定义表名,覆盖GORM默认表名
 func (c *UserModel) TableName() string {
 	return "tb_users"
 }

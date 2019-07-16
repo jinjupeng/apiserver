@@ -52,6 +52,8 @@ func openDB(username, password, addr, name string) *gorm.DB {
 		}
 	}
 
+	// 自动迁移模式
+	db.AutoMigrate(&VideoModel{})
 
 	return db
 }

@@ -1,12 +1,16 @@
 package model
 
-import _ "fmt"
+import (
+	_ "fmt"
+	"github.com/jinzhu/gorm"
+)
 
 // 视频映射实体
 type VideoModel struct {
-	BaseModel
+	gorm.Model
 	Title string `json:"title"`
 	Info string `json:"info"`
+	Url string `json:"url"`
 }
 
 // 自定义表名,覆盖GORM默认表名

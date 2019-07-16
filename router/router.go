@@ -2,6 +2,7 @@ package router
 
 import (
 	"apiserver/handler/api"
+	"apiserver/handler/api/v1/video"
 	"apiserver/pkg/upload"
 	"net/http"
 
@@ -44,6 +45,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 	// 前端预览
 	g.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
+
+	// 创建视频
+	g.POST("/video/create", video.CreateVideo)
 
 	// 用户路由设置
 	u := g.Group("v1/user")

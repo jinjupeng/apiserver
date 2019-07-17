@@ -8,7 +8,7 @@ var (
 	ErrValidation       = &Errno{Code: 20001, Message: "Validation failed."}
 	ErrDatabase         = &Errno{Code: 20002, Message: "Database error."}
 	ErrToken            = &Errno{Code: 20003, Message: "Error occurred while signing the JSON web token."}
-
+	ErrNotFind 			= &Errno{Code: 40400, Message: "404,Not Find."}
 	// user errors
 	ErrUserNotFound      = &Errno{Code: 20102, Message: "The user was not found."}
 	ErrEncrypt           = &Errno{Code: 20101, Message: "Error occurred while encrypting the user password."}

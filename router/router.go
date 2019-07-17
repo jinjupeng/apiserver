@@ -49,6 +49,12 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// 创建视频
 	g.POST("/video/create", video.CreateVideo)
 
+	// 视频播放
+	g.GET("/video/:id", video.ShowVideo)
+
+	// 视频列表
+	g.GET("/videos", video.ListVideo)
+
 	// 用户路由设置
 	u := g.Group("v1/user")
 	u.Use(middleware.AuthMiddleware())

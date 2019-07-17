@@ -15,7 +15,7 @@ func CreateVideo(c *gin.Context)  {
 	service := video.CreateVideoService{}
 	if err := c.ShouldBind(&service); err == nil {
 		res := service.Create()
-		handler.SendResponse(c, res, nil)
+		c.JSON(200, res)
 	} else {
 		handler.SendResponse(c, errno.ErrBind, nil)
 	}
